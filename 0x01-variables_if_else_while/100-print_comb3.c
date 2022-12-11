@@ -8,17 +8,24 @@
  */
 int main(void)
 {
-	int c = 0;
+	int ones = '0';
+	int tens = '0';
 
-	while (c < 88)
+	for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
 	{
-		putchar(46 + c);
-		if (c != 87)
+		for (ones = '0'; ones <= '9'; ones++)/* prints one digit*/
 		{
-			putchar(',');
-			putchar(' ');
+			if (!((ones == tens) || (tens > ones)))/*eliminates repitition*/
+			{
+				putchar(tens);
+				putchar(ones);
+				if (!(ones == '9' && tens == '8'))/*addes comma and space*/
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		c++;
 	}
 	putchar('\n');
 	return (0);
