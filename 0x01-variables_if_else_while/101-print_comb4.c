@@ -7,31 +7,28 @@
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundreds = '0';
+	int c;
+	int d = 0;
 
-	for (hundrers = '0'; hundreds <= '9'; hundreds++)
+	while (d < 10)
 	{
-		for (tens = '0'; tens <= '9'; tens++)
+		c = 0;
+		while (c < 10)
 		{
-			for (ones = '0'; ones <= '9'; ones++)
+			if (d != c && d < c)
 			{
-				if (!((ones == tens) || (tens == hundreds) ||
-							(tens > ones) || (hundreds > tens))) /*eliminates repitation*/
+				putchar('0' + d);
+				putchar('0' + c);
+
+				if (c + d != 17)
 				{
-					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundreds == '7' &&
-								tens == '8')) /*adds comas and spaces*/
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			c++;
 		}
+		d++;
 	}
 	putchar('\n');
 	return (0);
