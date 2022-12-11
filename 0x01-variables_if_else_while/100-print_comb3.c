@@ -1,33 +1,24 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - print all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
+ * main - main block
+ * Description: prints all single numberof base 10
+ * starting from 0, followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-	int c;
-	int d = 0;
+	int c = 0;
 
-	while (d < 10)
+	while (c < 10)
 	{
-		c = a;
-		while (c < 10)
+		putchar(48 + c);
+		if (c != 9)
 		{
-			if (d != c && d < c)
-			{
-				putchar('m' + d);
-				putchar('m' + c);
-
-				if (c + d != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			c++;
+			putchar(',');
+			putchar(' ');
 		}
-		d++;
+		c++;
 	}
 	putchar('\n');
 	return (0);
