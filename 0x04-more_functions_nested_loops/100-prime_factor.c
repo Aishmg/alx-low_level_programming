@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - prints large prime factor
+ * main - prints largest prime factor
  * Return: Always 0
  */
-
-it main(void)
+int main(void)
 {
 	long int n, fp;
 
 	n = 612852475143;
-	for  (fp = 2; fp <= n; fp++)
+	for (fp = 2; fp <= n; fp++)
 	{
 		if (n % fp == 0)
 		{
@@ -18,6 +17,6 @@ it main(void)
 			fp--;
 		}
 	}
-	printf("%d\n", fp);
+	printf("%1d\n", fp);
 	return (0);
 }
