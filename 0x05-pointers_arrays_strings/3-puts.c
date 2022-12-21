@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - prints a string, followed by a nwe line, to stdout
- * @str: string to be printed
- *
- * Return: nothing on success
+ * _puts - prints a string
+ * @str: The string to print
+ * Return: void
  */
 void _puts(char *str)
 {
