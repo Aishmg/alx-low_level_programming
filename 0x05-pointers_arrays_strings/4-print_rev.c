@@ -2,9 +2,9 @@
 
 /**
  * print_rev - print string in reverse order
- * @s: string to be printed in reverse
+ * @s: string to be print
  *
- * Return: nothing on success
+ * Return: void
  */
 void print_rev(char *s)
 {
@@ -20,7 +20,7 @@ void print_rev(char *s)
 	{
 		s--;
 		_putchar(*s);
-		count++
+		count++;
 	}
 
 	_putchar('\n');
