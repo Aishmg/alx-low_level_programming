@@ -2,22 +2,22 @@
 
 /**
  * print_array - prints n elements of an array of integers
- * @a: array to be printed
- * @n: number of elements in array
+ * @a: arrayof integer
+ * @n: number of elements of the array to be printed
  *
- * Return: nothing on success
+ * Return: void
  */
 void print_array(int *a, int n)
 {
-	int count = 0;
+	int j;
 
-	while (count < n)
+	for (j = 0; j < n; j++)
 	{
-		printf("%d", a[count]);
-
-		if (count != (n - 1))
-			printf(", ")
-				count++;
+		printf("%d", a[j]);
+		if (j != (n - 1))
+		{
+			printf(", ");
+		}
 	}
-	putchar('\n')
+	printf("\n");
 }
