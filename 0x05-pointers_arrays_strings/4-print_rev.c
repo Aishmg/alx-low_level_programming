@@ -10,18 +10,14 @@ void print_rev(char *s)
 {
 	int count = 0;
 
-	while (*s)
+	while (count >= 0)
 	{
-		s++;
+		if (s[count] == '\0')
+			break;
 		count++;
 	}
 
-	while (count)
-	{
-		s--;
-		_putchar(*s);
-		count++;
-	}
-
+	for (count--; count >= 0; count--)
+		_putchar(s[count]);
 	_putchar('\n');
 }
